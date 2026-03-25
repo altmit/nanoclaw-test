@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #0a0a0f;
-  color: #e2e8f0;
+  background: #f8faff;
+  color: #1e293b;
   line-height: 1.6;
 }
 
@@ -23,19 +23,20 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 4rem;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid #e2e8f0;
   backdrop-filter: blur(12px);
-  background: rgba(10,10,15,0.85);
+  background: rgba(255,255,255,0.92);
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 1px 8px rgba(99,102,241,0.07);
 }
 
 .logo {
   font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  color: #fff;
+  color: #4f46e5;
 }
 
 .nav-links {
@@ -45,13 +46,13 @@ body {
 }
 
 .nav-links a {
-  color: #94a3b8;
+  color: #64748b;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s;
 }
 
-.nav-links a:hover { color: #fff; }
+.nav-links a:hover { color: #4f46e5; }
 
 .btn-nav {
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
@@ -62,9 +63,10 @@ body {
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(99,102,241,0.25);
 }
-.btn-nav:hover { opacity: 0.85; }
+.btn-nav:hover { opacity: 0.88; box-shadow: 0 4px 18px rgba(99,102,241,0.35); }
 
 /* HERO */
 .hero {
@@ -75,17 +77,18 @@ body {
   text-align: center;
   padding: 6rem 2rem 5rem;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,102,241,0.25) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(139,92,246,0.12) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,102,241,0.13) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(167,139,250,0.08) 0%, transparent 60%),
+    linear-gradient(180deg, #f0f4ff 0%, #f8faff 100%);
 }
 
 .hero-badge {
   display: inline-block;
-  background: rgba(99,102,241,0.15);
-  border: 1px solid rgba(99,102,241,0.4);
-  color: #a5b4fc;
+  background: rgba(99,102,241,0.1);
+  border: 1px solid rgba(99,102,241,0.3);
+  color: #6366f1;
   font-size: 0.82rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.4rem 1rem;
   border-radius: 999px;
   margin-bottom: 2rem;
@@ -97,7 +100,7 @@ body {
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -2px;
-  color: #f8fafc;
+  color: #0f172a;
   margin-bottom: 1.5rem;
 }
 
@@ -111,7 +114,7 @@ body {
 .hero-sub {
   max-width: 560px;
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: #64748b;
   margin-bottom: 2.5rem;
 }
 
@@ -132,27 +135,27 @@ body {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 24px rgba(99,102,241,0.4);
+  box-shadow: 0 4px 20px rgba(99,102,241,0.35);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(99,102,241,0.5);
+  box-shadow: 0 8px 28px rgba(99,102,241,0.45);
 }
 .btn-primary.large { padding: 1rem 2.5rem; font-size: 1.1rem; }
 
 .btn-ghost {
-  background: rgba(255,255,255,0.05);
-  color: #cbd5e1;
-  border: 1px solid rgba(255,255,255,0.12);
+  background: #fff;
+  color: #4f46e5;
+  border: 1.5px solid #c7d2fe;
   padding: 0.85rem 2rem;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 }
-.btn-ghost:hover { background: rgba(255,255,255,0.1); }
+.btn-ghost:hover { background: #eef2ff; border-color: #a5b4fc; }
 
 .hero-stats {
   display: flex;
@@ -164,32 +167,32 @@ body {
   display: block;
   font-size: 1.8rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: #4f46e5;
   letter-spacing: -1px;
 }
 .stat p {
   font-size: 0.82rem;
-  color: #64748b;
+  color: #94a3b8;
   margin-top: 0.1rem;
 }
 .divider {
   width: 1px;
   height: 40px;
-  background: rgba(255,255,255,0.1);
+  background: #e2e8f0;
 }
 
 /* FEATURES */
 .features {
   padding: 5rem 4rem;
   text-align: center;
-  background: rgba(255,255,255,0.02);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
 }
 
 .features h2 {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #f1f5f9;
+  color: #0f172a;
   margin-bottom: 3rem;
   letter-spacing: -0.5px;
 }
@@ -203,16 +206,17 @@ body {
 }
 
 .feature-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: #f8faff;
+  border: 1.5px solid #e0e7ff;
   border-radius: 16px;
   padding: 2rem 1.5rem;
   text-align: left;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .feature-card:hover {
-  border-color: rgba(99,102,241,0.5);
+  border-color: #818cf8;
   transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(99,102,241,0.12);
 }
 
 .feature-icon {
@@ -223,7 +227,7 @@ body {
 .feature-card h3 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #1e293b;
   margin-bottom: 0.5rem;
 }
 
@@ -243,22 +247,23 @@ body {
 }
 
 .step-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: #f8faff;
+  border: 1.5px solid #e0e7ff;
   border-radius: 16px;
   padding: 2rem 1.5rem;
   text-align: left;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .step-card:hover {
-  border-color: rgba(99,102,241,0.5);
+  border-color: #818cf8;
   transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(99,102,241,0.12);
 }
 
 .step-num {
   font-size: 2.5rem;
   font-weight: 900;
-  color: rgba(99,102,241,0.4);
+  color: #c7d2fe;
   letter-spacing: -2px;
   margin-bottom: 0.8rem;
 }
@@ -266,7 +271,7 @@ body {
 .step-card h3 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #1e293b;
   margin-bottom: 0.5rem;
 }
 
@@ -278,12 +283,12 @@ body {
 }
 
 .code-block {
-  background: rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
   border-radius: 8px;
   padding: 0.6rem 1rem;
   font-size: 0.8rem;
-  color: #a5b4fc;
+  color: #4f46e5;
   font-family: 'Fira Code', monospace;
 }
 
@@ -301,14 +306,15 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 1.2rem;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: #f8faff;
+  border: 1.5px solid #e0e7ff;
   border-radius: 14px;
   padding: 1.4rem 1.6rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 .action-item:hover {
-  border-color: rgba(99,102,241,0.4);
+  border-color: #818cf8;
+  box-shadow: 0 4px 16px rgba(99,102,241,0.1);
 }
 
 .action-icon {
@@ -321,7 +327,7 @@ body {
   display: block;
   font-size: 1rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #1e293b;
   margin-bottom: 0.3rem;
 }
 
@@ -336,21 +342,21 @@ body {
 .cta-banner {
   padding: 5rem 2rem;
   text-align: center;
-  background: linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(139,92,246,0.1) 100%);
-  border-top: 1px solid rgba(99,102,241,0.2);
-  border-bottom: 1px solid rgba(99,102,241,0.2);
+  background: linear-gradient(135deg, #eef2ff 0%, #faf5ff 100%);
+  border-top: 1px solid #e0e7ff;
+  border-bottom: 1px solid #e0e7ff;
 }
 
 .cta-banner h2 {
   font-size: 2.4rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: #0f172a;
   margin-bottom: 0.8rem;
   letter-spacing: -0.5px;
 }
 
 .cta-banner p {
-  color: #94a3b8;
+  color: #64748b;
   font-size: 1.05rem;
   margin-bottom: 2rem;
 }
@@ -361,9 +367,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
-  border-top: 1px solid rgba(255,255,255,0.07);
+  border-top: 1px solid #e2e8f0;
   font-size: 0.85rem;
-  color: #475569;
+  color: #94a3b8;
+  background: #fff;
 }
 
 .footer-links {
@@ -372,8 +379,8 @@ body {
 }
 
 .footer-links a {
-  color: #475569;
+  color: #94a3b8;
   text-decoration: none;
   transition: color 0.2s;
 }
-.footer-links a:hover { color: #94a3b8; }
+.footer-links a:hover { color: #6366f1; }
